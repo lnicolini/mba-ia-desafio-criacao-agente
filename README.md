@@ -134,7 +134,7 @@ Dois moradores podem pedir a mesma área na mesma data e aprovar ao mesmo tempo.
 
 - Python 3.12+ e o gerenciador [uv](https://docs.astral.sh/uv/)
 - Uma chave de API do [Google AI Studio](https://aistudio.google.com/apikey)
-- Nada de infraestrutura extra: o banco é SQLite local, criado automaticamente em `var/`.
+- Sem serviços externos: o armazenamento é um SQLite embutido, criado automaticamente em `var/`.
 
 > **Cota do modelo.** O tier gratuito do Google AI Studio limita as requisições diárias por modelo (ex.: 20/dia em alguns Gemini 3.x), e o fluxo de avaliação faz dezenas de chamadas. Se a sua chave for de tier gratuito, ela pode travar no meio do fluxo — use uma chave com billing ativado ou troque o modelo por um com cota disponível via `AURORA_MODELO_PRINCIPAL`/`AURORA_MODELO_ESPECIALISTAS`.
 
